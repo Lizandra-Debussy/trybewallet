@@ -3,6 +3,7 @@ import getCurrenciesAPI from '../../services/currenciesAPI';
 export const USER = 'USER';
 export const CURRENCIES = 'CURRENCIES';
 export const EXPENSES = 'EXPENSES';
+export const REMOVE_EXPENSES = 'REMOVE_EXPENSES';
 
 export const userLogin = (payload) => ({
   type: USER,
@@ -27,5 +28,10 @@ export const currenciesActionThunk = () => async (dispatch) => {
 
 export const expensesAction = (payload) => ({
   type: EXPENSES,
+  payload,
+});
+
+export const removeExpensesAction = (payload) => ({
+  type: REMOVE_EXPENSES,
   payload,
 });
