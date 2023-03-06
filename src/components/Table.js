@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { removeExpensesAction } from '../redux/actions';
+import { removeExpensesAction, editExpenseAction } from '../redux/actions';
 
 class Table extends Component {
   render() {
-    const { expenses, removeExpense } = this.props;
+    const { expenses, removeExpense, editExpense } = this.props;
     return (
       <div>
         <table>
@@ -19,7 +19,7 @@ class Table extends Component {
               <th>Câmbio utilizado</th>
               <th>Valor convertido</th>
               <th>Moeda de conversão</th>
-              <th>Editar/Excluir</th>
+              <th>Excluir/Editar</th>
             </tr>
           </thead>
           <tbody>
@@ -45,6 +45,13 @@ class Table extends Component {
                   >
                     Excluir
                   </button>
+                  <button
+                    data-testid="edit-btn"
+                    type="button"
+                    onClick={ () => editExpense(expense.id) }
+                  >
+                    Editar Despesa
+                  </button>
                 </td>
               </tr>
             ))}
@@ -58,6 +65,7 @@ class Table extends Component {
 Table.propTypes = {
   expenses: PropTypes.arrayOf(PropTypes.any).isRequired,
   removeExpense: PropTypes.func.isRequired,
+  editExpense: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
@@ -66,6 +74,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   removeExpense: (payload) => dispatch(removeExpensesAction(payload)),
+  editExpense: (payload) => dispatch(editExpenseAction(payload)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Table);

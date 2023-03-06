@@ -4,6 +4,8 @@ export const USER = 'USER';
 export const CURRENCIES = 'CURRENCIES';
 export const EXPENSES = 'EXPENSES';
 export const REMOVE_EXPENSES = 'REMOVE_EXPENSES';
+export const EDIT_EXPENSE = 'EDIT_EXPENSES';
+export const UPDATE_EXPENSE = 'UPDATE_EXPENSE';
 
 export const userLogin = (payload) => ({
   type: USER,
@@ -33,5 +35,15 @@ export const expensesAction = (payload) => ({
 
 export const removeExpensesAction = (payload) => ({
   type: REMOVE_EXPENSES,
+  payload,
+});
+
+export const editExpenseAction = (id) => ({
+  type: EDIT_EXPENSE,
+  id,
+});
+
+export const updateExpenseAction = (payload) => ({
+  type: UPDATE_EXPENSE,
   payload,
 });
