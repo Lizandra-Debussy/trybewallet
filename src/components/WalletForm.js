@@ -60,7 +60,7 @@ class WalletForm extends Component {
     const { currencies, editor } = this.props;
     const { value, description, currency, method, tag } = this.state;
     return (
-      <form onSubmit={ this.handleClick }>
+      <form data-testid="wallet-form" onSubmit={ this.handleClick }>
         <label htmlFor="valor">
           Valor:
           <input

@@ -19,7 +19,7 @@ class Table extends Component {
               <th>Câmbio utilizado</th>
               <th>Valor convertido</th>
               <th>Moeda de conversão</th>
-              <th>Excluir/Editar</th>
+              <th>Editar/Excluir</th>
             </tr>
           </thead>
           <tbody>
@@ -39,18 +39,18 @@ class Table extends Component {
                 <td>Real</td>
                 <td>
                   <button
-                    data-testid="delete-btn"
-                    type="button"
-                    onClick={ () => removeExpense(expense.id) }
-                  >
-                    Excluir
-                  </button>
-                  <button
                     data-testid="edit-btn"
                     type="button"
                     onClick={ () => editExpense(expense.id) }
                   >
                     Editar Despesa
+                  </button>
+                  <button
+                    data-testid="delete-btn"
+                    type="button"
+                    onClick={ () => removeExpense(expense.id) }
+                  >
+                    Excluir
                   </button>
                 </td>
               </tr>
