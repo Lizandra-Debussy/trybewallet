@@ -1,13 +1,54 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# Repositório do projeto Trybewallet
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+Projeto desenvolvido durante o módulo de Front-End - Curso de Desenvolvimento WEB - Trybe.
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+Trybewallet é uma aplicação web que funciona como uma de carteira de controle de gastos, com conversor de moedas. Ao ser utilizada o usuário é capaz de:
+* Adicionar, remover e editar um gasto;
+* Visualizar uma tabela com seus gastos;
+* Visualizar o total de gastos convertidos para uma moeda escolhida;
+
+
+
+## Habilidades
+
+* Criar um store Redux em aplicações React;
+* Criar reducers no Redux em aplicações React;
+* Criar actions no Redux em aplicações React;
+* Criar dispatchers no Redux em aplicações React;
+* Conectar Redux aos componentes React;
+* Criar actions assíncronas na aplicação React que faz uso de Redux.
+
+## Tecnologias e Ferramentas
+
+* React
+* React Router
+* Redux
+* React Testing Library
+* Eslint
+
+<details>
+  <summary><strong> Documentação da API de Cotações de Moedas</strong></summary><br />
+
+  Essa aplicação consome dados da API awesomeapi API de Cotações para realizar a busca do câmbio de moedas. Endpoint utilizado:
+
+  * https://economia.awesomeapi.com.br/json/all
+</details>
+  
+## Como utilizar
+
+* Clone o repositório:
+```
+  git@github.com:Lizandra-Debussy/trybewallet.git
+```
+* Acesse a pasta do repositório:
+```
+  cd trybewallet
+```
+* Instale as dependências:
+```
+  npm install
+```
+* Inicie a aplicação:
+```
+  npm start
+```
